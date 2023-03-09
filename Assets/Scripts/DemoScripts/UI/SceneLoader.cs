@@ -13,12 +13,12 @@ public class SceneLoader : MonoBehaviour
     
     public void LoadLevel(int sceneIndex)
     {
+        Time.timeScale = 1f;
         fader.gameObject.SetActive(true);
         LeanTween.scale(fader,new Vector3(1,0,1), 0f);
         LeanTween.scale(fader,new Vector3(1,1,1),1f).setEase(LeanTweenType.easeInOutQuad).setOnComplete(()=>
         {
             StartCoroutine(ChangeScene(sceneIndex));
-
         });
       
     }
@@ -27,6 +27,7 @@ public class SceneLoader : MonoBehaviour
     IEnumerator ChangeScene(int sceneIndex)
     {
         yield return new WaitForSeconds(2);
+        Debug.Log("Loading Scene");
         SceneManager.LoadSceneAsync(sceneIndex);
     } 
    

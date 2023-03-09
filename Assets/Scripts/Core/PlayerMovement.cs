@@ -55,8 +55,8 @@ public class PlayerMovement : MonoBehaviour
     
     private void GetInput()
     {
-        m_verticalInput = 0.05f;
-        m_horizontalInput = Input.acceleration.x;
+        m_verticalInput = Input.acceleration.y * 2.0f;
+        m_horizontalInput = Input.acceleration.x * 2.0f;
     }
 
     private void HandleMotor()
