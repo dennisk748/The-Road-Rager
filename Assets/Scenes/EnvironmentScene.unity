@@ -6285,11 +6285,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4544047375751204, guid: 47ec854eca89b4b4bb79c7e2c6006a29, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.21
       objectReference: {fileID: 0}
     - target: {fileID: 4544047375751204, guid: 47ec854eca89b4b4bb79c7e2c6006a29, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.25
+      value: -16.4
       objectReference: {fileID: 0}
     - target: {fileID: 4544047375751204, guid: 47ec854eca89b4b4bb79c7e2c6006a29, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8212,8 +8212,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134878707}
-  m_LocalRotation: {x: 0.19894841, y: -1.5109162e-15, z: -8.070491e-18, w: 0.98001}
-  m_LocalPosition: {x: 0, y: 4.62, z: -29.16}
+  m_LocalRotation: {x: 0.19541939, y: 0.031424545, z: -0.006265037, w: 0.9801962}
+  m_LocalPosition: {x: -0.3449262, y: 2.4460711, z: -21.77395}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12918,6 +12918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1829439985}
   - component: {fileID: 1829439984}
+  - component: {fileID: 1829439986}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -12970,8 +12971,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829439983}
-  m_LocalRotation: {x: 0.19894841, y: -1.5109162e-15, z: -8.070491e-18, w: 0.98001}
-  m_LocalPosition: {x: 0, y: 4.62, z: -29.16}
+  m_LocalRotation: {x: 0.19541939, y: 0.031424545, z: -0.006265037, w: 0.9801962}
+  m_LocalPosition: {x: 0, y: 4.83, z: -27.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12979,6 +12980,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1829439986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829439983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 1
+  m_IgnoreTag: 
+  m_TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_MinimumDistanceFromTarget: 1.24
+  m_AvoidObstacles: 1
+  m_DistanceLimit: 0
+  m_MinimumOcclusionTime: 0
+  m_CameraRadius: 0.1
+  m_Strategy: 1
+  m_MaximumEffort: 4
+  m_SmoothingTime: 0
+  m_Damping: 0
+  m_DampingWhenOccluded: 0
+  m_OptimalTargetDistance: 0
 --- !u!1001 &1855691755
 PrefabInstance:
   m_ObjectHideFlags: 0
