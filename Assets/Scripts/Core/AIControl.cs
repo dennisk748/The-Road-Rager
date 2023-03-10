@@ -16,6 +16,10 @@ public class AIControl : MonoBehaviour
         m_agent.SetDestination(m_goalLocations[i].transform.position);
         m_animator = this.GetComponent<Animator>();
         m_animator.SetTrigger("IsWalking");
+        m_animator.SetFloat("wOffset", Random.Range(0.0f, 1.0f));
+        float speedMultiplier = Random.Range(0.5f, 2f);
+        m_animator.SetFloat("speedMult", speedMultiplier);
+        m_agent.speed *= speedMultiplier;
     }
 
     // Update is called once per frame
