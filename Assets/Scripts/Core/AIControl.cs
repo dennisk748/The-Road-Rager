@@ -38,7 +38,7 @@ public class AIControl : MonoBehaviour
 
     public void DetectVehicle(Vector3 position)
     {
-        if(Vector3.Distance(position, this.transform.position) < m_detectionRadius)
+        if(Vector3.Distance(position, this.transform.position) < m_detectionRadius && !m_agent.isStopped)
         {
             Vector3 fleeDirection = (this.transform.position - position).normalized;
             Vector3 newgoal = this.transform.position + fleeDirection * m_fleeRadius;
@@ -46,7 +46,7 @@ public class AIControl : MonoBehaviour
             NavMeshPath path = new NavMeshPath();
             m_agent.CalculatePath(newgoal, path);
 
-            if(path.status != NavMeshPathStatus.PathInvalid)
+            if(path.status != NavMeshPathStatus.PathInvalid )
             {
                 m_agent.SetDestination(path.corners[path.corners.Length - 1]);
                 m_animator.SetTrigger("IsRunning");
@@ -71,6 +71,8 @@ public class AIControl : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            Debug.Log("Collided with Player");
+            m_agent.isStopped = true;
             m_animator.SetBool("Death_b", true);
             m_animator.SetInteger("DeathType_int", 1);
         }
