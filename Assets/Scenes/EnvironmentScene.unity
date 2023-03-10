@@ -760,6 +760,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f94d1aef577594e99f38dfb0cfe025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_detectionRadius: 7
+  m_fleeRadius: 12
 --- !u!195 &90801914
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -770,7 +772,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1168,6 +1170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f94d1aef577594e99f38dfb0cfe025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_detectionRadius: 7
+  m_fleeRadius: 12
 --- !u!195 &130257463
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1178,7 +1182,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -5261,6 +5265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f94d1aef577594e99f38dfb0cfe025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_detectionRadius: 7
+  m_fleeRadius: 12
 --- !u!195 &774921726
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5271,7 +5277,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -5714,6 +5720,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f94d1aef577594e99f38dfb0cfe025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_detectionRadius: 7
+  m_fleeRadius: 12
 --- !u!195 &813644391
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5724,7 +5732,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -6345,7 +6353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4544047375751204, guid: 47ec854eca89b4b4bb79c7e2c6006a29, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3.31
       objectReference: {fileID: 0}
     - target: {fileID: 4544047375751204, guid: 47ec854eca89b4b4bb79c7e2c6006a29, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6353,7 +6361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4544047375751204, guid: 47ec854eca89b4b4bb79c7e2c6006a29, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.43
+      value: -2.27
       objectReference: {fileID: 0}
     - target: {fileID: 4544047375751204, guid: 47ec854eca89b4b4bb79c7e2c6006a29, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6771,6 +6779,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f94d1aef577594e99f38dfb0cfe025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_detectionRadius: 7
+  m_fleeRadius: 12
 --- !u!195 &913156155
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6781,7 +6791,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -8297,8 +8307,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134878707}
-  m_LocalRotation: {x: 0.18917951, y: -0.0005217822, z: 0.00010052576, w: 0.9819424}
-  m_LocalPosition: {x: 0.008496073, y: 3.4092185, z: -22.42464}
+  m_LocalRotation: {x: 0.18910751, y: 0.0000000084479606, z: -0.0000000016269286, w: 0.9819564}
+  m_LocalPosition: {x: -3.31, y: 3.41, z: -10.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10279,6 +10289,10 @@ PrefabInstance:
       value: Small Terrrain 5 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2493865446603134289, guid: 03cc72561cbb9e546b41049099284b6b, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493865446603134289, guid: 03cc72561cbb9e546b41049099284b6b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -10292,7 +10306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6409180345755935849, guid: 03cc72561cbb9e546b41049099284b6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.19059944
+      value: -0.33
       objectReference: {fileID: 0}
     - target: {fileID: 6409180345755935849, guid: 03cc72561cbb9e546b41049099284b6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12140,6 +12154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f94d1aef577594e99f38dfb0cfe025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_detectionRadius: 7
+  m_fleeRadius: 12
 --- !u!195 &1758204725
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12150,7 +12166,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -12725,6 +12741,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f94d1aef577594e99f38dfb0cfe025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_detectionRadius: 7
+  m_fleeRadius: 12
 --- !u!195 &1803309067
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13090,8 +13108,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829439983}
-  m_LocalRotation: {x: 0.18917951, y: -0.0005217822, z: 0.00010052576, w: 0.9819424}
-  m_LocalPosition: {x: 0, y: 3.41, z: -22.43}
+  m_LocalRotation: {x: 0.18910751, y: 0.0000000084479606, z: -0.0000000016269286, w: 0.9819564}
+  m_LocalPosition: {x: -3.31, y: 3.41, z: -10.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15037,6 +15055,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f94d1aef577594e99f38dfb0cfe025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_detectionRadius: 7
+  m_fleeRadius: 12
 --- !u!195 &2068872079
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -15047,7 +15067,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -15472,6 +15492,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f94d1aef577594e99f38dfb0cfe025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_detectionRadius: 7
+  m_fleeRadius: 12
 --- !u!195 &2109901828
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -15482,7 +15504,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -15519,6 +15541,10 @@ PrefabInstance:
       value: Small Terrrain 5 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2493865446603134289, guid: 03cc72561cbb9e546b41049099284b6b, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493865446603134289, guid: 03cc72561cbb9e546b41049099284b6b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -15532,7 +15558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6409180345755935849, guid: 03cc72561cbb9e546b41049099284b6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.18
+      value: -0.41
       objectReference: {fileID: 0}
     - target: {fileID: 6409180345755935849, guid: 03cc72561cbb9e546b41049099284b6b, type: 3}
       propertyPath: m_LocalPosition.z

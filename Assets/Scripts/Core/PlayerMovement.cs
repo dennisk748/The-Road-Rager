@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private float m_horizontalInput;
     private float m_steerAngle;
     private float m_verticalInput;
+    private GameObject[] m_nonPlayers;
 
     [SerializeField] private float m_motorForce;
     [SerializeField] private float m_maxSteeringAngle;
@@ -24,33 +25,25 @@ public class PlayerMovement : MonoBehaviour
 
     private float speed = 10.0f;
 
+    private void Start()
+    {
+        m_nonPlayers = GameObject.FindGameObjectsWithTag("agent");
+    }
+
+    private void Update()
+    {
+        foreach(GameObject gameObject in m_nonPlayers)
+        {
+            gameObject.GetComponent<AIControl>().DetectVehicle(this.transform.position);
+        }
+    }
+
     void FixedUpdate()
     {
         GetInput();
         HandleMotor();
         HandleSteering();
         UpdateWheel();
-
-        //Vector3 dir = Vector3.zero;
-
-        //// we assume that device is held parallel to the ground
-        //// and Home button is in the right hand
-
-        //// remap device acceleration axis to game coordinates:
-        ////  1) XY plane of the device is mapped onto XZ plane
-        ////  2) rotated 90 degrees around Y axis
-        //dir.x = Input.acceleration.x;
-        //dir.z = 0.05f;//Input.acceleration.x
-
-        //// clamp acceleration vector to unit sphere
-        //if (dir.sqrMagnitude > 1)
-        //    dir.Normalize();
-
-        //// Make it move 10 meters per second instead of 10 meters per frame...
-        //dir *= Time.deltaTime;
-
-        //// Move object
-        //transform.Translate(dir * speed);
     }
     
     private void GetInput()
