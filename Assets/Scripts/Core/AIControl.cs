@@ -66,4 +66,13 @@ public class AIControl : MonoBehaviour
         m_agent.angularSpeed = 120;
         m_agent.ResetPath();
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            m_animator.SetBool("Death_b", true);
+            m_animator.SetInteger("DeathType_int", 1);
+        }
+    }
 }
