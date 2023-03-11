@@ -48,8 +48,10 @@ public class PlayerMovement : MonoBehaviour
     
     private void GetInput()
     {
-        m_verticalInput = Input.acceleration.y * 2.0f;
-        m_horizontalInput = Input.acceleration.x * 2.0f;
+        //m_verticalInput = Input.acceleration.y * 2.0f;
+        //m_horizontalInput = Input.acceleration.x * 2.0f;
+        m_verticalInput = Input.GetAxis("Vertical");
+        m_horizontalInput = Input.GetAxis("Horizontal");
     }
 
     private void HandleMotor()
