@@ -34,7 +34,10 @@ public class PlayerMovement : MonoBehaviour
     {
         foreach(GameObject gameObject in m_nonPlayers)
         {
-            gameObject.GetComponent<AIControl>().DetectVehicle(this.transform.position);
+            if(gameObject != null)
+            {
+                gameObject.GetComponent<AIControl>().DetectVehicle(this.transform.position);
+            }
         }
     }
 

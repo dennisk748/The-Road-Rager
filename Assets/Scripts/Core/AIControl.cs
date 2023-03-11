@@ -71,12 +71,11 @@ public class AIControl : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            Debug.Log("Collided with Player");
             m_agent.isStopped = true;
             m_animator.SetBool("Death_b", true);
             m_animator.SetInteger("DeathType_int", 1);
             SFXManager.instance.PlaySFX();
-            
+            GameObject.Destroy(this.gameObject, 2f);
         }
     }
 }
