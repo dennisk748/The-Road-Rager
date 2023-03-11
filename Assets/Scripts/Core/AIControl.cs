@@ -89,16 +89,8 @@ public class AIControl : MonoBehaviour
             m_animator.SetBool("Death_b", true);
             m_animator.SetInteger("DeathType_int", 1);
             GameObject.Destroy(this.gameObject, 2f);
-            m_boxCollider.isTrigger = false;
+            if(m_boxCollider != null)
+                m_boxCollider.isTrigger = false;
         }
-        StartCoroutine(ResetTrigger());
-    }
-
-    IEnumerator ResetTrigger()
-    {
-        Debug.Log("Reset to false");
-        yield return new WaitForSeconds(2f);
-        
-        m_bloodSplat.SetBool("splatBlood", false);
     }
 }
