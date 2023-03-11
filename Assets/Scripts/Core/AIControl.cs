@@ -75,6 +75,8 @@ public class AIControl : MonoBehaviour
             m_agent.isStopped = true;
             m_animator.SetBool("Death_b", true);
             m_animator.SetInteger("DeathType_int", 1);
+            SFXManager.instance.PlaySFX();
+            
         }
     }
 }
