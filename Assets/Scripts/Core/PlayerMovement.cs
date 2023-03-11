@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform m_frontRightWheelTransfrom;
     [SerializeField] private Transform m_rearRightWheelTransform;
 
+    [SerializeField] AudioSource m_audioSource;
+
     private float speed = 10.0f;
 
     private void Start()
@@ -60,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
     private void HandleMotor()
     {
         m_frontLeftWheelCollider.motorTorque = m_verticalInput * m_motorForce;
+        m_audioSource.pitch  = Mathf.Lerp(1f,1.5f,m_verticalInput);
         m_frontRightWheelCollider.motorTorque = m_verticalInput * m_motorForce;
     }
 
