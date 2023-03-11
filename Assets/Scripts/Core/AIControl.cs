@@ -19,6 +19,7 @@ public class AIControl : MonoBehaviour
     [SerializeField] AudioClip m_audioClipPeopleScream;
     [SerializeField] AudioClip m_audioClipBoneCrush;
     [SerializeField] Animator m_bloodSplat;
+    [SerializeField] BoxCollider m_boxCollider;
     void Start()
     {
         m_agent = this.GetComponent<NavMeshAgent>();
@@ -87,7 +88,17 @@ public class AIControl : MonoBehaviour
             m_bloodSplat.SetTrigger("splatBlood");
             m_animator.SetBool("Death_b", true);
             m_animator.SetInteger("DeathType_int", 1);
-            GameObject.Destroy(this.gameObject, 4f);
+            GameObject.Destroy(this.gameObject, 2f);
+            m_boxCollider.isTrigger = false;
         }
+        StartCoroutine(ResetTrigger());
+    }
+
+    IEnumerator ResetTrigger()
+    {
+        Debug.Log("Reset to false");
+        yield return new WaitForSeconds(2f);
+        
+        m_bloodSplat.SetBool("splatBlood", false);
     }
 }
