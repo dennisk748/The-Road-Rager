@@ -24,8 +24,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform m_rearRightWheelTransform;
 
     [SerializeField] AudioSource m_audioSource;
+    [SerializeField] Joystick m_joystick;
 
-    private float speed = 10.0f;
+    //private float speed = 10.0f;
 
     private void Start()
     {
@@ -53,10 +54,12 @@ public class PlayerMovement : MonoBehaviour
     
     private void GetInput()
     {
-        // m_verticalInput = Input.acceleration.y * 2.0f;
-        // m_horizontalInput = Input.acceleration.x * 2.0f;
-        m_horizontalInput = Input.GetAxis("Horizontal");
-        m_verticalInput = Input.GetAxis("Vertical");
+        //m_verticalInput = Input.acceleration.x * 2.0f;
+        //m_horizontalInput = Input.acceleration.y * 2.0f;
+        //m_horizontalInput = Input.GetAxis("Horizontal");
+        //m_verticalInput = Input.GetAxis("Vertical");
+        m_horizontalInput = m_joystick.Horizontal;
+        m_verticalInput = m_joystick.Vertical;
     }
 
     private void HandleMotor()

@@ -20,6 +20,7 @@ public class AIControl : MonoBehaviour
     [SerializeField] AudioClip m_audioClipBoneCrush;
     [SerializeField] Animator m_bloodSplat;
     [SerializeField] BoxCollider m_boxCollider;
+    [SerializeField] GameEvent m_onAICollisison;
     void Start()
     {
         m_agent = this.GetComponent<NavMeshAgent>();
@@ -83,14 +84,14 @@ public class AIControl : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            if (m_boxCollider != null)
+                m_boxCollider.isTrigger = false;
             m_agent.isStopped = true;
             m_audioSource1.PlayOneShot(m_audioClipBoneCrush);
-            m_bloodSplat.SetTrigger("splatBlood");
+            m_onAICollisison.Raise();
             m_animator.SetBool("Death_b", true);
             m_animator.SetInteger("DeathType_int", 1);
-            GameObject.Destroy(this.gameObject, 2f);
-            if(m_boxCollider != null)
-                m_boxCollider.isTrigger = false;
+            GameObject.Destroy(this.gameObject, 2f);  
         }
     }
 }
